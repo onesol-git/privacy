@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아동 안전 표준 | RunMate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #e74c3c;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .update-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            color: #e74c3c;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        h3 {
+            color: #495057;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .warning {
+            background-color: #f8d7da;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #dc3545;
+            margin: 20px 0;
+        }
+
+        .critical {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .critical h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .contact-emergency {
+            background-color: #2c3e50;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .contact-emergency h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .contact-box {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 2px solid #007bff;
+        }
+
+        .email-link {
+            color: #007bff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 8px 16px;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .email-link:hover {
+            background-color: #007bff;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+        }
+
+        .hotline {
+            color: #e74c3c;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #fdedec;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+
+        .hotline:hover {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .important {
+            color: #dc3545;
+            font-weight: 600;
+        }
+
+        .step-number {
+            background-color: #e74c3c;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 3px solid #e74c3c;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .age-restriction {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .age-restriction h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+            
+            .hotline {
+                font-size: 1.1rem;
+                padding: 8px 16px;
+                margin: 5px 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>아동 안전 표준</h1>
+            <div class="subtitle">RunMate 아동 보호 및 안전 정책</div>
+            <div class="update-date">최종 수정일: 2025년 8월 17일</div>
+        </div>
+
+        <div class="critical">
+            <h3>🛡️ 아동 보호 최우선 원칙</h3>
+            <p>RunMate는 아동의 안전과 보호를 최우선으로 하며, 아동 성적 학대 및 착취(CSAE)를 포함한 모든 형태의 아동 학대를 강력히 금지합니다.</p>
+        </div>
+
+        <div class="age-restriction">
+            <h3>📅 연령 제한 정책</h3>
+            <p><strong>RunMate는 만 13세 이상만 이용 가능합니다</strong><br>
+            만 13세 미만 아동의 서비스 이용을 금지하며, 위반 시 즉시 계정을 정지합니다.</p>
+        </div>
+
+        <h2>1. 아동 성적 학대 및 착취(CSAE) 금지 정책</h2>
+        <div class="warning">
+            <h3 style="color: #721c24; margin-bottom: 10px;">⚠️ 무관용 원칙</h3>
+            <p><strong>RunMate는 아동 성적 학대 및 착취에 대해 무관용 원칙을 적용합니다.</strong></p>
+            <ul>
+                <li>아동을 성적으로 묘사하거나 성적 대상화하는 모든 콘텐츠 금지</li>
+                <li>아동에 대한 성적 행위를 조장하거나 묘사하는 텍스트, 이미지, 영상 금지</li>
+                <li>아동을 대상으로 한 그루밍(grooming) 행위 금지</li>
+                <li>아동의 신체 부위를 부적절하게 노출하는 콘텐츠 금지</li>
+                <li>아동에게 성적인 내용의 메시지 전송 금지</li>
+            </ul>
+        </div>
+
+        <h2>2. 금지되는 행위</h2>
+        <p>다음과 같은 행위는 엄격히 금지되며, 발견 시 즉시 계정 영구 정지 및 관련 기관에 신고됩니다:</p>
+
+        <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <strong>부적절한 연락 시도</strong><br>
+                아동에게 개인정보 요구, 만남 제안, 부적절한 대화 시도
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <strong>성적 콘텐츠 공유</strong><br>
+                아동이 포함된 성적 이미지, 영상, 텍스트 업로드 또는 공유
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <strong>그루밍 행위</strong><br>
+                아동의 신뢰를 얻어 성적 학대로 이끄는 모든 형태의 행위
+            </div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <strong>위험한 만남 유도</strong><br>
+                아동을 오프라인에서 만나려는 시도나 위험한 상황에 노출시키는 행위
+            </div>
+        </div>
+
+        <h2>3. 신고 및 대응 체계</h2>
+        <div class="contact-emergency">
+            <h3>🚨 긴급 신고 연락처</h3>
+            <p style="margin-bottom: 15px;">아동 관련 위급 상황 발견 시 즉시 연락해주세요</p>
+            <a href="tel:112" class="hotline">112 (경찰청)</a>
+            <a href="tel:117" class="hotline">117 (성폭력신고)</a>
+            <a href="tel:1588-2828" class="hotline">1588-2828 (아동학대신고)</a>
+        </div>
+
+        <div class="contact-box">
+            <h3 style="margin-bottom: 15px; color: #333;">📧 RunMate 신고 센터</h3>
+            <p>아동 관련 부적절한 행위 발견 시 즉시 신고해주세요:</p>
+            <a href="mailto:safety@runmate.com?subject=[긴급신고] 아동 안전 관련 신고&body=신고 내용을 상세히 기재해주세요.%0A%0A■ 신고 대상 사용자: %0A■ 발생 일시: %0A■ 신고 내용: %0A■ 증거 자료 (스크린샷 등): %0A%0A신속한 조치를 위해 가능한 한 구체적으로 기재해주시기 바랍니다." class="email-link">safety@runmate.com</a>
+            <p style="margin-top: 10px; color: #666; font-size: 0.9rem;">24시간 모니터링하며 접수 즉시 조치합니다</p>
+        </div>
+
+        <h2>4. 신고 처리 절차</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>단계</th>
+                    <th>처리 내용</th>
+                    <th>소요 시간</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1단계</strong></td>
+                    <td>신고 접수 및 즉시 임시 조치</td>
+                    <td>즉시 (1시간 이내)</td>
+                </tr>
+                <tr>
+                    <td><strong>2단계</strong></td>
+                    <td>전문팀 조사 및 증거 수집</td>
+                    <td>24시간 이내</td>
+                </tr>
+                <tr>
+                    <td><strong>3단계</strong></td>
+                    <td>관련 계정 영구 정지</td>
+                    <td>48시간 이내</td>
+                </tr>
+                <tr>
+                    <td><strong>4단계</strong></td>
+                    <td>관련 기관 신고 및 법적 조치</td>
+                    <td>즉시</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5. 보호자 및 교육자 안내</h2>
+        <div class="highlight">
+            <h3>👨‍👩‍👧‍👦 보호자를 위한 가이드</h3>
+            <ul>
+                <li><strong>자녀의 앱 사용 모니터링:</strong> 정기적으로 자녀의 앱 사용 현황을 확인해주세요</li>
+                <li><strong>개인정보 보호 교육:</strong> 온라인에서 개인정보를 공유하지 않도록 교육해주세요</li>
+                <li><strong>부적절한 접촉 신고:</strong> 의심스러운 접촉이나 메시지를 발견하면 즉시 신고해주세요</li>
+                <li><strong>오픈 커뮤니케이션:</strong> 자녀가 불편한 상황을 겪을 때 언제든 말할 수 있는 환경을 만들어주세요</li>
+            </ul>
+        </div>
+
+        <h2>6. 기술적 보호 조치</h2>
+        <p>RunMate는 아동 보호를 위해 다음과 같은 기술적 조치를 시행합니다:</p>
+
+        <ul>
+            <li><strong>AI 기반 콘텐츠 모니터링:</strong> 부적절한 콘텐츠 자동 탐지 및 차단</li>
+            <li><strong>실시간 채팅 모니터링:</strong> 위험한 키워드 및 패턴 실시간 감지</li>
+            <li><strong>연령 인증 시스템:</strong> 가입 시 연령 확인 및 미성년자 보호 기능</li>
+            <li><strong>신고 시스템:</strong> 쉽고 빠른 신고 기능으로 즉시 대응</li>
+            <li><strong>보호자 통제 기능:</strong> 부모가 자녀의 계정을 관리할 수 있는 기능</li>
+        </ul>
+
+        <h2>7. 교육 및 인식 개선</h2>
+        <p>RunMate는 아동 안전에 대한 인식 개선을 위해 지속적으로 노력합니다:</p>
+
+        <ul>
+            <li>정기적인 안전 교육 콘텐츠 제공</li>
+            <li>아동 보호 관련 캠페인 진행</li>
+            <li>전문 기관과의 협력을 통한 정책 개선</li>
+            <li>사용자 커뮤니티와 함께하는 안전한 환경 조성</li>
+        </ul>
+
+        <h2>8. 법적 준수 사항</h2>
+        <p>RunMate는 다음 법령을 엄격히 준수합니다:</p>
+
+        <ul>
+            <li><strong>아동․청소년의 성보호에 관한 법률</strong></li>
+            <li><strong>정보통신망 이용촉진 및 정보보호 등에 관한 법률</strong></li>
+            <li><strong>개인정보보호법</strong></li>
+            <li><strong>청소년 보호법</strong></li>
+            <li><strong>형법 (아동 성범죄 관련 조항)</strong></li>
+        </ul>
+
+        <h2>9. 협력 기관</h2>
+        <div class="contact-box">
+            <h3 style="color: #333; margin-bottom: 15px;">🤝 협력 기관 연락처</h3>
+            <table style="margin: 0;">
+                <thead>
+                    <tr>
+                        <th>기관명</th>
+                        <th>연락처</th>
+                        <th>담당 업무</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>아동권리보장원</td>
+                        <td>1577-1391</td>
+                        <td>아동학대 신고 및 상담</td>
+                    </tr>
+                    <tr>
+                        <td>한국성폭력상담소</td>
+                        <td>02-338-5801</td>
+                        <td>성폭력 상담 및 지원</td>
+                    </tr>
+                    <tr>
+                        <td>청소년사이버상담센터</td>
+                        <td>1388</td>
+                        <td>청소년 온라인 상담</td>
+                    </tr>
+                    <tr>
+                        <td>사이버경찰청</td>
+                        <td>cyber.go.kr</td>
+                        <td>사이버 범죄 신고</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>10. 정책 위반 시 조치</h2>
+        <div class="warning">
+            <h3 style="color: #721c24; margin-bottom: 10px;">🚫 위반 시 조치사항</h3>
+            <ul>
+                <li><span class="important">즉시 계정 영구 정지</span></li>
+                <li><span class="important">관련 데이터 보존 및 수사기관 제출</span></li>
+                <li><span class="important">법적 고발 조치</span></li>
+                <li>IP 주소 및 기기 정보 차단</li>
+                <li>재가입 영구 금지</li>
+            </ul>
+        </div>
+
+        <h2>11. 지속적인 개선 노력</h2>
+        <p>RunMate는 아동 안전을 위해 지속적으로 정책과 시스템을 개선하고 있습니다:</p>
+
+        <ul>
+            <li>정기적인 정책 검토 및 업데이트</li>
+            <li>최신 보안 기술 도입</li>
+            <li>전문가 자문을 통한 정책 개선</li>
+            <li>사용자 피드백 반영</li>
+            <li>국제 기준에 맞는 안전 조치 강화</li>
+        </ul>
+
+        <div class="critical">
+            <h3>📞 24시간 긴급 신고 체계</h3>
+            <p>아동의 안전이 위험한 상황에서는 주저하지 마시고 즉시 신고해주세요.<br>
+            <strong>safety@runmate.com | 24시간 모니터링</strong></p>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #dee2e6; color: #666;">
+            <p>RunMate 아동 안전 표준 v1.0</p>
+            <p>본 정책은 관련 법령 변경 시 즉시 업데이트됩니다</p>
+            <p>최종 업데이트: 2025년 8월 17일</p>
+        </div>
+    </div>
+</body>
+</html>
