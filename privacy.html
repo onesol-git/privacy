@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개인정보취급방침 | RunMate</title>
+    <title>런메이츠 개인정보처리방침</title>
     <style>
         * {
             margin: 0;
@@ -12,336 +12,365 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
+            padding: 20px;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: white;
             border-radius: 12px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
 
         .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
             text-align: center;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .article {
             margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 25px;
         }
 
-        h1 {
-            color: #007bff;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+        .article:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
         }
 
-        .update-date {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        h2 {
-            color: #007bff;
-            font-size: 1.4rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            padding-left: 10px;
-            border-left: 4px solid #007bff;
-        }
-
-        h3 {
-            color: #495057;
-            font-size: 1.1rem;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        .highlight {
-            background-color: #e3f2fd;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #2196f3;
-            margin: 20px 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background-color: white;
-        }
-
-        th, td {
-            border: 1px solid #dee2e6;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f8f9fa;
+        .article-title {
+            color: #4a5568;
+            font-size: 20px;
             font-weight: 600;
-            color: #495057;
-        }
-
-        .contact-info {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-
-        ul {
-            margin-left: 20px;
             margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
         }
 
-        li {
+        .article-content {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .article-content p {
+            margin-bottom: 12px;
+        }
+
+        .sub-section {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .sub-section-title {
+            font-weight: 600;
+            color: #2d3748;
             margin-bottom: 8px;
         }
 
-        .important {
-            color: #dc3545;
-            font-weight: 600;
+        .list-item {
+            margin: 8px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .list-item:before {
+            content: "•";
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .numbered-item {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .highlight {
+            background-color: #f7fafc;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .contact-info strong {
+            color: #2d3748;
+        }
+
+        .effective-date {
+            text-align: center;
+            padding: 20px;
+            background: #f1f5f9;
+            color: #64748b;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-                padding: 15px;
+            body {
+                padding: 10px;
             }
-            
-            h1 {
-                font-size: 1.8rem;
+
+            .content {
+                padding: 20px;
             }
-            
-            h2 {
-                font-size: 1.2rem;
+
+            .header {
+                padding: 20px;
             }
-            
-            table {
-                font-size: 0.9rem;
+
+            .header h1 {
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>개인정보취급방침</h1>
-            <div class="update-date">최종 수정일: 2025년 8월 12일</div>
+<div class="container">
+    <div class="header">
+        <h1>개인정보처리방침</h1>
+        <p>런메이츠(RunMates)</p>
+    </div>
+
+    <div class="content">
+        <div class="article">
+            <h2 class="article-title">제1조 (목적)</h2>
+            <div class="article-content">
+                <p>런메이츠(이하 '회사'라고 함)는 회사가 제공하고자 하는 서비스(이하 '회사 서비스')를 이용하는 개인(이하 '이용자' 또는 '개인')의 정보(이하 '개인정보')를 보호하기 위해, 개인정보보호법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률(이하 '정보통신망법') 등 관련 법령을 준수하고, 서비스 이용자의 개인정보 보호 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보처리방침(이하 '본 방침')을 수립합니다.</p>
+            </div>
         </div>
 
-        <div class="highlight">
-            <p><strong>RunMate</strong>(이하 "회사")는 이용자의 개인정보보호를 매우 중요하게 생각하며, 개인정보보호법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 관련 법령을 준수하고 있습니다.</p>
+        <div class="article">
+            <h2 class="article-title">제2조 (개인정보 처리의 원칙)</h2>
+            <div class="article-content">
+                <p>개인정보 관련 법령 및 본 방침에 따라 회사는 이용자의 개인정보를 수집할 수 있으며 수집된 개인정보는 개인의 동의가 있는 경우에 한해 제3자에게 제공될 수 있습니다. 단, 법령의 규정 등에 의해 적법하게 강제되는 경우 회사는 수집한 이용자의 개인정보를 사전에 개인의 동의 없이 제3자에게 제공할 수도 있습니다.</p>
+            </div>
         </div>
 
-        <h2>1. 개인정보의 수집 및 이용목적</h2>
-        <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
-        
-        <h3>가. 회원 가입 및 관리</h3>
-        <ul>
-            <li>회원 식별, 본인인증, 회원자격 유지·관리</li>
-            <li>서비스 부정이용 방지, 각종 고지·통지</li>
-            <li>고충처리, 분쟁조정을 위한 기록보존</li>
-        </ul>
-
-        <h3>나. 서비스 제공</h3>
-        <ul>
-            <li>러닝 기록 관리 및 분석 서비스 제공</li>
-            <li>맞춤형 서비스 제공, 서비스 개선</li>
-            <li>프로필 사진 등록 및 관리</li>
-        </ul>
-
-        <h2>2. 수집하는 개인정보의 항목</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>수집항목</th>
-                    <th>수집목적</th>
-                    <th>수집방법</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>휴대폰 번호</strong></td>
-                    <td>본인인증, 계정 보안, 중요 알림 발송</td>
-                    <td>회원가입 시 직접 입력</td>
-                </tr>
-                <tr>
-                    <td>이름(닉네임)</td>
-                    <td>서비스 이용, 회원 식별</td>
-                    <td>회원가입 시 직접 입력</td>
-                </tr>
-                <tr>
-                    <td>이메일 주소</td>
-                    <td>계정 관리, 서비스 관련 안내</td>
-                    <td>회원가입 시 직접 입력</td>
-                </tr>
-                <tr>
-                    <td>러닝 기록 데이터</td>
-                    <td>운동 기록 관리 및 분석</td>
-                    <td>앱 사용 중 자동 수집</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>3. 개인정보의 처리 및 보유기간</h2>
-        <p>회사는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>개인정보 항목</th>
-                    <th>보유기간</th>
-                    <th>근거</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>회원정보 (휴대폰번호, 이메일 등)</td>
-                    <td>회원탈퇴 후 즉시 삭제</td>
-                    <td>이용자 동의</td>
-                </tr>
-                <tr>
-                    <td>서비스 이용기록</td>
-                    <td>3개월</td>
-                    <td>통신비밀보호법</td>
-                </tr>
-                <tr>
-                    <td>러닝 기록 데이터</td>
-                    <td>회원탈퇴 후 1년</td>
-                    <td>서비스 개선 목적</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>4. 개인정보의 제3자 제공</h2>
-        <p>회사는 정보주체의 개인정보를 제1조(개인정보의 처리목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 개인정보보호법 제17조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</p>
-        
-        <div class="highlight">
-            <p><strong>현재 회사는 이용자의 개인정보를 제3자에게 제공하지 않습니다.</strong></p>
+        <div class="article">
+            <h2 class="article-title">제3조 (본 방침의 공개)</h2>
+            <div class="article-content">
+                <div class="numbered-item">1. 회사는 이용자가 언제든지 쉽게 본 방침을 확인할 수 있도록 회사 홈페이지 첫 화면 또는 첫 화면과의 연결화면을 통해 본 방침을 공개하고 있습니다.</div>
+                <div class="numbered-item">2. 회사는 제1항에 따라 본 방침을 공개하는 경우 글자 크기, 색상 등을 활용하여 이용자가 본 방침을 쉽게 확인할 수 있도록 합니다.</div>
+            </div>
         </div>
 
-        <h2>5. 개인정보처리의 위탁</h2>
-        <p>회사는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.</p>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>위탁업체</th>
-                    <th>위탁업무</th>
-                    <th>개인정보 보유기간</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>AWS (Amazon Web Services)</td>
-                    <td>클라우드 서버 운영 및 데이터 저장</td>
-                    <td>위탁계약 종료 시 까지</td>
-                </tr>
-                <tr>
-                    <td>Firebase (Google)</td>
-                    <td>인증 서비스, 푸시 알림</td>
-                    <td>위탁계약 종료 시 까지</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>6. 정보주체의 권리·의무 및 행사방법</h2>
-        <p>정보주체는 회사에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.</p>
-        
-        <ul>
-            <li>개인정보 처리현황 통지요구</li>
-            <li>개인정보 열람요구</li>
-            <li>개인정보 정정·삭제요구</li>
-            <li>개인정보 처리정지요구</li>
-        </ul>
-        
-        <p>위의 권리 행사는 회사에 대해 서면, 전화, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 회사는 이에 대해 지체없이 조치하겠습니다.</p>
-
-        <h2>7. 개인정보의 파기</h2>
-        <p>회사는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.</p>
-        
-        <h3>가. 파기절차</h3>
-        <p>이용자가 입력한 정보는 목적 달성 후 별도의 DB에 옮겨져(종이의 경우 별도의 서류) 내부 방침 및 기타 관련 법령에 따라 일정기간 저장된 후 혹은 즉시 파기됩니다.</p>
-        
-        <h3>나. 파기방법</h3>
-        <ul>
-            <li>전자적 파일형태: 기록을 재생할 수 없도록 로우레밸포멧(Low Level Format) 등의 방법을 이용하여 파기</li>
-            <li>종이에 출력된 개인정보: 분쇄기로 분쇄하거나 소각하여 파기</li>
-        </ul>
-
-        <h2>8. 개인정보의 안전성 확보조치</h2>
-        <p>회사는 개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적/관리적 및 물리적 조치를 하고 있습니다.</p>
-        
-        <ul>
-            <li><strong>개인정보 취급 직원의 최소화 및 교육:</strong> 개인정보를 취급하는 직원을 지정하고 담당자에 한정시켜 최소화 하여 개인정보를 관리하는 대책을 시행하고 있습니다.</li>
-            <li><strong>정기적인 자체 감사:</strong> 개인정보 취급 관련 안정성 확보를 위해 정기적(분기 1회)으로 자체 감사를 실시하고 있습니다.</li>
-            <li><strong>개인정보의 암호화:</strong> 이용자의 개인정보는 비밀번호는 암호화 되어 저장 및 관리되고 있어, 본인만이 알 수 있으며 중요한 데이터는 파일 및 전송 데이터를 암호화 하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 사용하고 있습니다.</li>
-            <li><strong>해킹 등에 대비한 기술적 대책:</strong> 해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여 보안프로그램을 설치하고 주기적인 갱신·점검을 하며 외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고 있습니다.</li>
-        </ul>
-
-        <h2>9. 앱 권한 사용 안내</h2>
-        <div class="highlight">
-            <h3>카메라 권한 사용</h3>
-            <ul>
-                <li><strong>사용 목적:</strong> 프로필 사진 촬영 및 등록</li>
-                <li><strong>수집 정보:</strong> 사용자가 촬영한 사진</li>
-                <li><strong>이용 범위:</strong> 앱 내 프로필 사진으로만 사용되며, 외부로 전송되지 않음</li>
-                <li><span class="important">권한을 거부하실 경우 프로필 사진 등록 기능을 사용할 수 없습니다.</span></li>
-            </ul>
+        <div class="article">
+            <h2 class="article-title">제4조 (본 방침의 변경)</h2>
+            <div class="article-content">
+                <div class="numbered-item">1. 본 방침은 개인정보 관련 법령, 지침, 고시 또는 정부나 회사 서비스의 정책이나 내용의 변경에 따라 개정될 수 있습니다.</div>
+                <div class="numbered-item">2. 회사는 제1항에 따라 본 방침을 개정하는 경우 다음 각 호 하나 이상의 방법으로 공지합니다.
+                    <div class="sub-section">
+                        <div class="list-item">회사가 운영하는 인터넷 홈페이지의 첫화면의 공지사항란 또는 별도의 창을 통하여 공지하는 방법</div>
+                        <div class="list-item">서면·모사전송·전자우편 또는 이와 비슷한 방법으로 이용자에게 공지하는 방법</div>
+                    </div>
+                </div>
+                <div class="numbered-item">3. 회사는 제2항의 공지는 본 방침 개정의 시행일로부터 최소 7일 이전에 공지합니다. 다만, 이용자 권리의 중요한 변경이 있을 경우에는 최소 30일 전에 공지합니다.</div>
+            </div>
         </div>
 
-        <h2>10. 개인정보보호책임자</h2>
-        <div class="contact-info">
-            <p>회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보보호책임자를 지정하고 있습니다.</p>
-            
-            <h3>개인정보보호책임자</h3>
-            <ul>
-                <li><strong>성명:</strong> 개인정보보호책임자</li>
-                <li><strong>연락처:</strong> privacy@runmate.com</li>
-                <li><strong>전화:</strong> 02-1234-5678</li>
-            </ul>
-            
-            <p>정보주체께서는 회사의 서비스를 이용하시면서 발생한 모든 개인정보보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보보호책임자에게 문의하실 수 있습니다. 회사는 정보주체의 문의에 대해 지체없이 답변 및 처리해드릴 것입니다.</p>
+        <div class="article">
+            <h2 class="article-title">제5조 (회원 가입을 위한 정보)</h2>
+            <div class="article-content">
+                <p>회사는 이용자의 회사 서비스에 대한 회원가입을 위하여 다음과 같은 정보를 수집합니다.</p>
+                <div class="numbered-item">1. 필수수집 정보: 이메일주소, 비밀번호, 이름, 닉네임, 생년월일 및 휴대폰번호</div>
+                <div class="numbered-item">2. 선택 수집 정보: 프로필 사진</div>
+            </div>
         </div>
 
-        <h2>11. 개인정보 처리방침 변경</h2>
-        <p>이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.</p>
-        
-        <div class="highlight">
-            <p><strong>본 방침은 2025년 8월 12일부터 시행됩니다.</strong></p>
+        <div class="article">
+            <h2 class="article-title">제6조 (본인 인증을 위한 정보)</h2>
+            <div class="article-content">
+                <p>회사는 이용자의 본인인증을 위하여 다음과 같은 정보를 수집합니다.</p>
+                <div class="numbered-item">1. 필수 수집 정보: 휴대폰번호, 이메일 주소, 생년월일, 성별, 본인확인값(CI,DI), 이동통신사, 아이핀 정보(아이핀 확인 시) 및 내/외국인 여부</div>
+            </div>
         </div>
 
-        <h2>12. 개인정보의 열람청구</h2>
-        <p>정보주체는 개인정보보호법 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다. 회사는 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다.</p>
-        
-        <div class="contact-info">
-            <h3>개인정보 열람청구 접수·처리 부서</h3>
-            <ul>
-                <li><strong>부서명:</strong> 개인정보보호팀</li>
-                <li><strong>담당자:</strong> 개인정보보호담당자</li>
-                <li><strong>연락처:</strong> privacy@runmate.com</li>
-                <li><strong>전화:</strong> 02-1234-5678</li>
-            </ul>
+        <div class="article">
+            <h2 class="article-title">제7조 (회사 서비스 제공을 위한 정보)</h2>
+            <div class="article-content">
+                <p>회사는 이용자에게 회사의 서비스를 제공하기 위하여 다음과 같은 정보를 수집합니다.</p>
+                <div class="numbered-item">1. 필수 수집 정보: 아이디, 이메일 주소, 이름, 생년월일 및 연락처</div>
+            </div>
         </div>
 
-        <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #dee2e6; color: #666;">
-            <p>RunMate 개인정보취급방침 v1.0</p>
-            <p>최종 업데이트: 2025년 8월 12일</p>
+        <div class="article">
+            <h2 class="article-title">제8조 (서비스 이용 및 부정 이용 확인을 위한 정보)</h2>
+            <div class="article-content">
+                <p>회사는 이용자의 서비스 이용에 따른 통계, 분석 및 부정이용의 확인·분석을 위하여 다음과 같은 정보를 수집합니다.</p>
+                <div class="highlight">
+                    <strong>부정이용이란</strong> 회원탈퇴 후 재가입, 상품구매 후 구매취소 등을 반복적으로 행하는 등 회사가 제공하는 할인쿠폰, 이벤트 혜택 등의 경제상 이익을 불·편법적으로 수취하는 행위, 이용약관 등에서 금지하고 있는 행위, 명의도용 등의 불·편법행위 등을 말합니다.
+                </div>
+                <div class="numbered-item">1. 필수 수집 정보: 서비스이용기록, 쿠키, 접속지 정보 및 기기정보</div>
+            </div>
+        </div>
+
+        <div class="article">
+            <h2 class="article-title">제9조 (기타 수집 정보)</h2>
+            <div class="article-content">
+                <p>회사는 아래와 같이 정보를 수집합니다.</p>
+                <div class="numbered-item">1. 수집목적: 매칭, 러닝인구통계작성</div>
+                <div class="numbered-item">2. 수집정보: 러닝기록, 매칭기록</div>
+            </div>
+        </div>
+
+        <div class="article">
+            <h2 class="article-title">제10조 (개인정보 수집 방법)</h2>
+            <div class="article-content">
+                <p>회사는 다음과 같은 방법으로 이용자의 개인정보를 수집합니다.</p>
+                <div class="numbered-item">1. 이용자가 회사의 홈페이지에 자신의 개인정보를 입력하는 방식</div>
+                <div class="numbered-item">2. 어플리케이션 등 회사가 제공하는 홈페이지 외의 서비스를 통해 이용자가 자신의 개인정보를 입력하는 방식</div>
+                <div class="numbered-item">3. 이용자가 고객센터의 상담, 게시판에서의 활동 등 회사의 서비스를 이용하는 과정에서 이용자가 입력하는 방식</div>
+            </div>
+        </div>
+
+        <div class="article">
+            <h2 class="article-title">제11조 (개인정보의 이용)</h2>
+            <div class="article-content">
+                <p>회사는 개인정보를 다음 각 호의 경우에 이용합니다.</p>
+                <div class="numbered-item">1. 공지사항의 전달 등 회사운영에 필요한 경우</div>
+                <div class="numbered-item">2. 이용문의에 대한 회신, 불만의 처리 등 이용자에 대한 서비스 개선을 위한 경우</div>
+                <div class="numbered-item">3. 회사의 서비스를 제공하기 위한 경우</div>
+                <div class="numbered-item">4. 법령 및 회사 약관을 위반하는 회원에 대한 이용 제한 조치, 부정 이용 행위를 포함하여 서비스의 원활한 운영에 지장을 주는 행위에 대한 방지 및 제재를 위한 경우</div>
+                <div class="numbered-item">5. 신규 서비스 개발을 위한 경우</div>
+                <div class="numbered-item">6. 이벤트 및 행사 안내 등 마케팅을 위한 경우</div>
+                <div class="numbered-item">7. 인구통계학적 분석, 서비스 방문 및 이용기록의 분석을 위한 경우</div>
+                <div class="numbered-item">8. 개인정보 및 관심에 기반한 이용자간 관계의 형성을 위한 경우</div>
+            </div>
+        </div>
+
+        <div class="article">
+            <h2 class="article-title">제12조 (개인정보의 보유 및 이용 기간)</h2>
+            <div class="article-content">
+                <div class="numbered-item">1. 회사는 이용자의 개인정보에 대해 개인정보의 수집·이용 목적 달성을 위한 기간 동안 개인정보를 보유 및 이용합니다.</div>
+                <div class="numbered-item">2. 전항에도 불구하고 회사는 내부 방침에 의해 서비스 부정이용기록은 부정 가입 및 이용방지를 위하여 회원 탈퇴시점으로부터 최대 1년간 보관합니다.</div>
+            </div>
+        </div>
+
+        <div class="article">
+            <h2 class="article-title">제13조 (법령에 따른 개인정보의 보유 및 이용기간)</h2>
+            <div class="article-content">
+                <p>회사는 관계법령에 따라 다음과 같이 개인정보를 보유 및 이용합니다.</p>
+
+                <div class="sub-section">
+                    <div class="sub-section-title">1. 전자상거래 등에서의 소비자보호에 관한 법률에 따른 보유정보 및 보유기간</div>
+                    <div class="list-item">계약 또는 청약철회 등에 관한 기록: 5년</div>
+                    <div class="list-item">대금결제 및 재화 등의 공급에 관한 기록: 5년</div>
+                    <div class="list-item">소비자의 불만 또는 분쟁처리에 관한 기록: 3년</div>
+                    <div class="list-item">표시광고에 관한 기록: 6개월</div>
+                </div>
+
+                <div class="sub-section">
+                    <div class="sub-section-title">2. 통신비밀보호법에 따른 보유정보 및 보유기간</div>
+                    <div class="list-item">웹사이트 로그기록 자료: 3개월</div>
+                </div>
+
+                <div class="sub-section">
+                    <div class="sub-section-title">3. 전자금융거래법에 따른 보유정보 및 보유기간</div>
+                    <div class="list-item">전자금융거래에 관한 기록: 5년</div>
+                </div>
+
+                <div class="sub-section">
+                    <div class="sub-section-title">4. 위치정보의 보호 및 이용 등에 관한 법률</div>
+                    <div class="list-item">개인위치정보에 관한 기록: 6개월</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article">
+            <h2 class="article-title">제14조 (개인정보의 파기원칙)</h2>
+            <div class="article-content">
+                <p>회사는 원칙적으로 이용자의 개인정보 처리 목적의 달성, 보유·이용기간의 경과 등 개인정보가 필요하지 않을 경우에는 해당 정보를 지체 없이 파기합니다.</p>
+            </div>
+        </div>
+
+        <div class="article">
+            <h2 class="article-title">제15조 (개인정보파기절차)</h2>
+            <div class="article-content">
+                <div class="numbered-item">1. 이용자가 회원가입 등을 위해 입력한 정보는 개인정보 처리 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부방침 및 기타 관련 법령에 의한 정보보호사유에 따라(보유 및 이용기간 참조) 일정 기간 저장된 후 파기되어집니다.</div>
+                <div class="numbered-item">2. 회사는 파기 사유가 발생한 개인정보를 개인정보보호책임자의 승인절차를 거쳐 파기합니다.</div>
+            </div>
+        </div>
+
+        <div class="article">
+            <h2 class="article-title">제16조 (개인정보파기방법)</h2>
+            <div class="article-content">
+                <p>회사는 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제하며, 종이로 출력된 개인정보는 분쇄기로 분쇄하거나 소각 등을 통하여 파기합니다.</p>
+            </div>
+        </div>
+
+        <div class="article">
+            <h2 class="article-title">제26조 (회사의 개인정보 보호 책임자 지정)</h2>
+            <div class="article-content">
+                <p>회사는 이용자의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 관련 부서 및 개인정보 보호 책임자를 지정하고 있습니다.</p>
+
+                <div class="contact-info">
+                    <div class="sub-section-title">개인정보 보호책임자</div>
+                    <div class="list-item"><strong>성명:</strong> 강산</div>
+                    <div class="list-item"><strong>직책:</strong> 이사</div>
+                    <div class="list-item"><strong>전화번호:</strong> 010-2432-7071</div>
+                    <div class="list-item"><strong>이메일:</strong> enzofe7071@gmail.com</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article">
+            <h2 class="article-title">제27조 (권익침해에 대한 구제방법)</h2>
+            <div class="article-content">
+                <div class="numbered-item">1. 정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보 분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.</div>
+
+                <div class="contact-info">
+                    <div class="list-item"><strong>개인정보분쟁조정위원회:</strong> (국번없이) 1833-6972 (www.kopico.go.kr)</div>
+                    <div class="list-item"><strong>개인정보침해신고센터:</strong> (국번없이) 118 (privacy.kisa.or.kr)</div>
+                    <div class="list-item"><strong>대검찰청:</strong> (국번없이) 1301 (www.spo.go.kr)</div>
+                    <div class="list-item"><strong>경찰청:</strong> (국번없이) 182 (ecrm.cyber.go.kr)</div>
+                </div>
+
+                <div class="numbered-item">2. 회사는 정보주체의 개인정보자기결정권을 보장하고, 개인정보침해로 인한 상담 및 피해 구제를 위해 노력하고 있으며, 신고나 상담이 필요한 경우 제1항의 담당부서로 연락해주시기 바랍니다.</div>
+                <div class="numbered-item">3. 개인정보 보호법 제35조(개인정보의 열람), 제36조(개인정보의 정정·삭제), 제37조(개인정보의 처리정지 등)의 규정에 의한 요구에 대하여 공공기관의 장이 행한 처분 또는 부작위로 인하여 권리 또는 이익의 침해를 받은 자는 행정심판법이 정하는 바에 따라 행정심판을 청구할 수 있습니다.</div>
+
+                <div class="contact-info">
+                    <div class="list-item"><strong>중앙행정심판위원회:</strong> (국번없이) 110 (www.simpan.go.kr)</div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="effective-date">
+        <strong>부칙</strong><br>
+        본 방침은 2025년 08월 20일부터 시행됩니다.
+    </div>
+</div>
 </body>
 </html>
